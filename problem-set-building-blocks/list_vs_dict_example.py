@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Practical Algorthns
-Problem set: 
+Problem set: Working with Data Structures
 
 """
 import random as rand
