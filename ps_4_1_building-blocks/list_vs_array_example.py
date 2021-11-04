@@ -29,7 +29,7 @@ def sum_10_natnums_list():
         
 def sum_10_natnums_array():
     """
-    square and display first ten natural numbers using list
+    square and display first ten natural numbers using array
   
     Parameters
     ----------
