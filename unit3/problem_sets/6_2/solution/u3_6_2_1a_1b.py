@@ -37,10 +37,10 @@ class NodeSinglyLinkedList:
         self.key = key
 
     def get_nxt(self):
-        <YOUR-CODE-HERE>
+        return self.nxt   
     
     def set_nxt(self,nxt):
-        <YOUR-CODE-HERE>
+        self.nxt = nxt
 
 #%% SinglyLinkedList class
 class SinglyLinkedList:
@@ -74,11 +74,19 @@ class SinglyLinkedList:
         return node    
 
     def size(self):
-        <YOUR-CODE-HERE>
+        count = 0
+        node = self.head
+        while node != None:
+            node = node.nxt
+            count += 1
+        return(count)
 
         
     def print_all_keys(self):
-        <YOUR-CODE-HERE>
+        node = self.head
+        while node != None:
+            print(f"{node.key},",end="")
+            node = node.nxt
 
 #%% Test SinglyLinkedList
 # =============================================================================
