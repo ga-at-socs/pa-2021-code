@@ -82,4 +82,14 @@ class BST:
         <YOUR-CODE-HERE>        
         
     def height(self):
-        <YOUR-CODE-HERE>        
+        <YOUR-CODE-HERE>
+        
+    def traverse_in_order(self):
+        <YOUR-CODE-HERE>                
+
+    def traverse_pre_order(self):
+        <YOUR-CODE-HERE>                
+
+    def traverse_post_order(self):
+        <YOUR-CODE-HERE>                
+                
