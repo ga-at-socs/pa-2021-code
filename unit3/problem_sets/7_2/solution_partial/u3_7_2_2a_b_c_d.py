@@ -72,10 +72,10 @@ class BST:
     def maximum(self):
         <YOUR-CODE-HERE>        
 
-    def insert(self, node):
+    def insert(self, key):
         <YOUR-CODE-HERE>        
 
-    def search(self, node):
+    def search(self, node, key):
         <YOUR-CODE-HERE>        
 
     def size(self):
