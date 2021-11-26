@@ -107,6 +107,8 @@ class DoublyLinkedList:
         #otherwise, the nodes successor's prv pointer needs to point to where the node's prv pointer is pointing
         else:
             node.nxt.prv = node.prv
+            
+        return node.key
     
     def search_key(self,key):
         node = self.head

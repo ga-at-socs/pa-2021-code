@@ -97,7 +97,18 @@ class DoublyLinkedList:
         #otherwise, the nodes successor's prv pointer needs to point to where the node's prv pointer is pointing
         else:
             node.nxt.prv = node.prv
-    
+            
+        return node.key
+
+    #added for the use of "front()" method of Queue class
+    def peek_head(self):
+        #list is empty, nothing to peek at
+        if self.head == None:
+            return None
+        else:               
+            return (self.head.key)
+
+        
     def search_key(self,key):
         node = self.head
         while node != None and node.key != key:
@@ -144,4 +155,49 @@ class DoublyLinkedList:
             
         return node
     
-#%%     
+#%% Queue
+class Queue:
+    """
+    Implementation of the Queue ADT, based on DoublyLinkedLists
+    """
+    
+    def __init__(self):
+        self.dll = DoublyLinkedList()
+        
+    def enqueue(self, key):
+        self.dll.insert_tail(key)
+        
+    def dequeue(self):
+       return(self.dll.delete_head())
+
+    def front(self):
+       return(self.dll.peek_head())
+
+    def queue_size(self):
+        return(self.dll.size())
+       
+    def queue_empty(self):
+        return(self.dll.size()==0)
+
+   
+#%% Test
+
+q = Queue()
+q.queue_empty()
+q.enqueue(10)
+q.queue_empty()
+q.enqueue(11)
+q.enqueue(12)
+q.queue_size()
+q.front()
+q.front()
+q.queue_size()
+q.dequeue()
+q.enqueue(15)
+q.queue_size()
+q.front()
+q.dequeue()
+q.dequeue()
+q.queue_size()
+q.dequeue()
+q.queue_empty()
