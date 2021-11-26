@@ -110,6 +110,13 @@ class BST:
             self.traverse_in_order(node.get_left())
             print (node.get_key())
             self.traverse_in_order(node.get_right())
+
+    def traverse_in_order_2list(self, node, list1):
+        if node != None:
+            self.traverse_in_order_2list(node.get_left(), list1)
+            list1.append(node.get_key())
+            self.traverse_in_order_2list(node.get_right(), list1)
+
             
     def traverse_pre_order(self, node):
         if node != None:
@@ -135,6 +142,20 @@ class BST:
         if node.get_left() == None and node.get_right() == None:
             return 0
         return (max( self.height(node.get_left()), self.height(node.get_right()) ) + 1)
+
+    
+    def check_BST(self, node):
+        #there is a recursive way to do it, but a simpler way is to simply
+        #do an in-order traversal, and then check that it's in ascendign order
+        #(in-order traversal of a BST should result in a sorted list)
+        #the in-order traversal methods simply prints to screen, which is no good for us
+        #so we create another version, traverse_in_order_2list, whih returns a list
+        #that results from the in-order traversal
+        list1 = []
+        bst.traverse_in_order_2list(bst.root, list1)
+        return (list1 == sorted(list1))
+            
+        
 
 
 #%% Testing insert, min and max
@@ -172,11 +193,16 @@ if (sr):
     print("Found ", sr.get_key())
 
 #%% Traversal test
-bst.traverse_in_order(bst.root)    
+bst.traverse_in_order(bst.root)
 bst.traverse_pre_order(bst.root)    
 bst.traverse_post_order(bst.root)    
 
 #%% Testing size and height
 bst.size(bst.root)
 bst.height(bst.root)
+
+#%% check BST condition
+bst.check_BST(bst.root)
+
     
+
