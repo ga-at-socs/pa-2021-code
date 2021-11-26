@@ -96,10 +96,10 @@ while(True):
     if url == "q":
         break
     elif url == "b":
-        print (url_stack.pop())
-        current_url = url_stack.peek()
+        current_url = url_stack.pop()
+        print (current_url)
     else:
         url_stack.push(current_url)
         current_url = url
-        string = "You are at this url : " + current_url + ". Enter the url you wish to visit next (or \"q\" to quit, \"b\" to go back to previous url) : "
+    string = "You are at this url : " + current_url + ". Enter the url you wish to visit next (or \"q\" to quit, \"b\" to go back to previous url) : "
     url = input(string)
