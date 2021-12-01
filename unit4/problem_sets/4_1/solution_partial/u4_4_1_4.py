@@ -73,6 +73,6 @@ test_fact(<YOUR-CODE-HERE>)
 
 """
 fact_iter loops n times (starts at n, goes down to 1, decrementing by 1 at
-each step). So its complexity is O(1)
+each step). So its complexity is O(n)
 """
    
