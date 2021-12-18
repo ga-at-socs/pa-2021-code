@@ -1,6 +1,6 @@
 """
 Practical Algorthns
-Problem set: Unit 3, set 8.1
+Problem set: Unit 5, set 2.1
 
 Code for:
     + Merge Sort
