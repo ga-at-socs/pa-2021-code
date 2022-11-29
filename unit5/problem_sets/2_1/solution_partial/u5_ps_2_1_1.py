@@ -17,13 +17,8 @@ import sys
 #==============================================================
 
 #%% Merge
-def MERGE(A,p,q,r):
-    #calculating the sizes of L and R
-    #we will place our "sentinels" at this value
-    n1 = <YOUR_CODE_HERE>
-    n2 = <YOUR_CODE_HERE>
-    
-    print ("_MERGE_ called with p =", p, ", q =", q, ", r =", r, ", n1 =", n1, ", n2 =", n2)
+def MERGE(A,p,q,r):    
+    print ("_MERGE_ called with p =", p, ", q =", q, ", r =", r)
     
     #In python, the upper index in slice operation is exclusive 
     #That is, we go up to that index, but it is not included
